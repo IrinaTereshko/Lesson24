@@ -12,9 +12,15 @@ public class Student extends Human {
     public Student() {
     }
 
+//    public Student(String name, int age, double mark) {
+//        this.name = name;
+//        this.age = age;
+//        this.mark = mark;
+//    }
+
+
     public Student(String name, int age, double mark) {
-        this.name = name;
-        this.age = age;
+        super(name, age);
         this.mark = mark;
     }
 
@@ -28,7 +34,10 @@ public class Student extends Human {
         }
     }
 
+    //    public String getInfo() {
+//        return " Name: " + name + ". Age: " + age + ". Mark : " + mark + ".";
+//    }
     public String getInfo() {
-        return " Name: " + name + ". Age: " + age + ". Mark : " + mark + ".";
+        return super.getInfo() + ". Mark: " + mark;
     }
 }
