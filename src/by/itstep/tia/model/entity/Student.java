@@ -4,13 +4,17 @@ package by.itstep.tia.model.entity;
 public class Student extends Human {
     //добавляем только то, чего нет у базового класса
 
-    
-    private  double mark;
+    public static final int MIN_MARK = 0;
+    public static final int MAX_MARK = 10;
 
-    public  Student (){};
+    private double mark;
+
+    public Student() {
+    }
 
     public Student(String name, int age, double mark) {
-        super(name, age);
+        this.name = name;
+        this.age = age;
         this.mark = mark;
     }
 
@@ -19,6 +23,12 @@ public class Student extends Human {
     }
 
     public void setMark(double mark) {
-        this.mark = mark;
+        if (mark > MIN_MARK & mark >= MIN_MARK) {
+            this.mark = mark;
+        }
+    }
+
+    public String getInfo() {
+        return " Name: " + name + ". Age: " + age + ". Mark : " + mark + ".";
     }
 }

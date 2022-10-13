@@ -12,6 +12,9 @@ public class Main {
         System.out.println(human2.getInfo());
 
 
-        Human human = new Student();
+        //Human human = new Student();
+        Student student = new Student("Alex", 20, 8);
+
+        System.out.println(student.getInfo());
     }
 }
