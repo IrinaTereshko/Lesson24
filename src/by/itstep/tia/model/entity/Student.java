@@ -8,6 +8,7 @@ public class Student extends Human {
     public static final int MAX_MARK = 10;
 
     private double mark;
+    private MarkNote note;
 
     public Student() {
     }
